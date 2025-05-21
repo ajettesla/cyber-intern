@@ -18,7 +18,7 @@ Our SPL query implements a simple two‑window check over fixed 10‑minute buck
 
 * **Bucket and count**: Group all RDP login events into ten‑minute intervals, tallying failures (4625) and successes (4624).
 * **Look ahead**: For each bucket, peek at the very next bucket’s success count.
-* **Flagging rule**: Mark a bucket as a brute‑force event if it has **zero successful logins**, **more than six failures**, **and** the following bucket also has **zero successes**.
+* **Flagging rule**: Mark a bucket as a brute‑force event if it hasn greater than **zero successful logins**, **more than six failures**, **and** the following bucket also has greater than **zero successes**.
 * **Filter and display**: Finally, only those buckets meeting the rule are output, showing timestamp, success count, failure count, and a “yes” indicator for brute‑force.
 
 This approach reliably isolates windows where an attacker is clearly hammering password guesses without any legitimate success.
