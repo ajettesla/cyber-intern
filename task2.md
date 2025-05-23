@@ -62,7 +62,7 @@ Triggers when a registry key or value is deleted.
 
 Critical for detecting unwanted configuration removals.
 
-![image](https://github.com/user-attachments/assets/8e251f34-4c53-4805-889b-0b275aedd504)
+![image](https://github.com/user-attachments/assets/f6209369-c76c-41da-abaa-a576e5d03e58)
 
 Windows Registry Auditing Guide
 🔍 Overview
