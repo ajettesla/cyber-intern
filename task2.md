@@ -30,9 +30,7 @@ Since eicar.txt is a test file, some engines detect it as a false positive.
 
 You can check which engines flagged it and their reasoning.
 
-
-![image](https://github.com/user-attachments/assets/befdc5c9-2a58-468c-9d48-59484e487304)
-
+![Screenshot (10)](https://github.com/user-attachments/assets/92ee024e-3339-4322-9d9b-2d740a35ec13)
 
 
 🔍 Registry-Related Event Codes in Windows
