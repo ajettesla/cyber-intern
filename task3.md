@@ -41,3 +41,22 @@ index=* | stats count by src_ip, dest_ip, dest_port
 
 
 ![image](https://github.com/user-attachments/assets/adcdfa7c-45d8-47c3-bf21-6fb3841593fa)
+
+🔧 Step 1: Set Up the Netcat Server
+On the listening machine, run:
+
+bash
+nc -lvp 12345
+✅ -l → Listen mode ✅ -v → Verbose output ✅ -p → Specify port (12345 in this case)
+
+🖥️ Step 2: Connect from the Netcat Client
+On the attacking/test machine, connect to the server using:
+
+bash
+nc <server_ip> 12345
+Replace <server_ip> with your actual server’s IP.
+
+✅ Once connected, you can send test data between the systems.
+
+📌 Why This Helps in Port & Connection Testing?
+1️⃣ Simulates real network traffic, helping detect unusual port activity. 2️⃣ Allows testing unexpected open ports that might be used in attacks. 3️⃣ Helps verify Splunk logging and detection for unusual connections.
