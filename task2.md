@@ -63,3 +63,75 @@ Critical for detecting unwanted configuration removals.
 
 ![image](https://github.com/user-attachments/assets/f882805e-174d-4d01-ad54-03e34336b1cc)
 
+
+Windows Registry Auditing Guide
+🔍 Overview
+This guide explains how to enable auditing for Windows registry changes using different methods. Registry auditing helps detect unauthorized modifications and security threats.
+
+📌 Methods to Enable Registry Auditing
+1️⃣ Enable Auditing via Command Line (auditpol)
+If you don’t have access to secpol.msc, use PowerShell or Command Prompt:
+
+powershell
+auditpol /set /subcategory:"Registry" /success:enable /failure:enable
+✅ Verify if auditing is enabled:
+
+powershell
+auditpol /get /subcategory:"Registry"
+🔹 If Success and Failure appear, auditing is enabled.
+
+2️⃣ Enable Auditing via Local Security Policy (secpol.msc)
+If you have access to Local Security Policy, follow these steps:
+
+Open Run (Win + R), type secpol.msc, and press Enter.
+
+Navigate to:
+
+Security Settings > Local Policies > Audit Policy
+Find "Audit Object Access", double-click it.
+
+Enable Success & Failure.
+
+Click OK and restart your computer.
+
+3️⃣ Enable Auditing via Group Policy (gpedit.msc)
+If your system supports Group Policy Editor, use this method:
+
+Open Run (Win + R), type gpedit.msc, and press Enter.
+
+Navigate to:
+
+Computer Configuration > Windows Settings > Security Settings > Advanced Audit Policy Configuration > Object Access
+Click Audit Registry and enable Success & Failure.
+
+Click Apply & OK, then restart your system.
+
+4️⃣ Enable Auditing via Registry (regedit)
+If you cannot access secpol.msc, modify the registry directly:
+
+Open Registry Editor (regedit).
+
+Navigate to:
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Lsa
+Right-click on AuditBaseObjects, select Modify, and set the value to 1.
+
+Restart your system.
+
+🔎 How to Verify Registry Events
+Once auditing is enabled:
+
+Open Event Viewer (eventvwr.msc).
+
+Navigate to Windows Logs > Security.
+
+Look for Event ID 4657 (Registry Modification).
+
+If needed, filter for other registry-related events:
+
+EventCode=4656 (Registry access request)
+
+EventCode=4663 (Registry key accessed)
+
+EventCode=4657 (Registry value modified)
+
