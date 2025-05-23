@@ -170,6 +170,16 @@ $SPLUNK_HOME/bin/splunk restart
 
 ---
 
+🛠 Install and Start Sysmon on Windows
+
+    Download Sysmon from:
+    https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon
+
+    Download Sysmon config (recommended):
+    https://github.com/SwiftOnSecurity/sysmon-config
+
+    Install command (in Command Prompt as Administrator):
+
 ## ✅ Verification
 
 * Login to Splunk Enterprise.
@@ -183,5 +193,6 @@ index=lab_index | stats count by host, sourcetype
 * You should see logs from both Windows and Ubuntu VMs.
 
 ---
+
 
 Let me know if you want this in `.md` file format directly or want to include screenshots, diagrams, or architecture illustrations.
