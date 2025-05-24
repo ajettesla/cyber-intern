@@ -58,8 +58,11 @@ Does this version meet your requirements? Let me know if you'd like further refi
 ![image](https://github.com/user-attachments/assets/e014d61b-2c10-491d-bcf6-45d35de8b132)
 
 
-This is image below show that bruteforce attack with src ip address  
+The image below shows a brute-force attack using a source IP address's. Since this is generated test data and not based on real-world activity, there were no successful login attempts within the following 10 minutes.
 
-![image](https://github.com/user-attachments/assets/b08d1ecc-2f5a-41fe-9f58-c1c04ead8517)
+You can find the `logGen` repository in my [GitHub repository](https://github.com/ajettesla/logGen).
+
+![image](https://github.com/user-attachments/assets/c1238ef2-67fd-48ce-81c8-540548801e80)
+
 
 
